@@ -1,5 +1,5 @@
 # EcoCraftApp
-![App Logo]((https://github.com/eco-craft/EcoCraftApp-MD/blob/ee47ba8c5dad6814e3c403fe45dcf006d452f185/imagereadme/image1.png))
+![App Logo](imagereadme/image1.png)
 
 EcoCraftApp is a waste detection app that can recognize the type of waste from an image and provide recommendations for crafts that can be made from the detected waste.
 
