@@ -1,3 +1,5 @@
+(We are still at the stage of transferring design to code, everything will be displayed in stages.)
+
 # EcoCraftApp
 ![App Logo](imagereadme/image1.png)
 
