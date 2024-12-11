@@ -1,4 +1,4 @@
-(We are still at the stage of transferring design to code, everything will be displayed in stages.)
+(We are currently in the testing phase and we will update it soon)
 
 # EcoCraftApp
 ![App Logo](imagereadme/image1.png)
