@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.detection.result.DetectionResultFragment">
+
+    <View
+        android:id="@+id/header_view"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/teal_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Back"
+        android:src="@drawable/baseline_arrow_back_ios_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/deep_green" />
+
+    <TextView
+        android:id="@+id/title_detection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/ribeye"
+        android:text="Detection"
+        android:textColor="@color/deep_green"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/back_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="Logo"
+        android:src="@drawable/logo"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/title_detection"
+        app:layout_constraintStart_toEndOf="@id/title_detection"
+        app:layout_constraintTop_toTopOf="@id/title_detection" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_image"
+        android:layout_width="match_parent"
+        android:layout_height="188dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="50dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_view">
+
+        <ImageView
+            android:id="@+id/detected_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:outlineProvider="background"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/sampel_sampah" />
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/cv_image"
+        app:layout_constraintEnd_toEndOf="@id/cv_image"
+        app:layout_constraintStart_toStartOf="@id/cv_image"
+        app:layout_constraintTop_toTopOf="@id/cv_image" />
+
+    <TextView
+        android:id="@+id/result_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/ribeye"
+        android:text="Detection Result:"
+        android:textColor="@color/deep_green"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_image" />
+
+    <TextView
+        android:id="@+id/waste_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/tauri"
+        android:textColor="@color/deep_green"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result_label"
+        tools:text="Kardus" />
+
+    <TextView
+        android:id="@+id/recommendation_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/ribeye"
+        android:text="Craft Idea:"
+        android:textColor="@color/deep_green"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/waste_type" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRecommendation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recommendation_title"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_craft" />
+
+    <com.afrinacapstone.ecocraft.util.EmptyState
+        android:id="@+id/empty_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recommendation_title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
