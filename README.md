@@ -1,12 +1,5 @@
 # Eco Craft✨
 ![App Screenshot](assetreadme/banner.png)
-
-## How to Clone This Project
-1. Clone this repository to your device.
-2. Open in Android Studio.
-3. Build the project.
-4. Run and debug the project on your AVD emulator.
-
 ## Project Summary
 Eco Craft is an Android mobile application designed to detect waste through a user’s camera or gallery and provide creative, eco-friendly craft ideas based on the detected waste. The app aims to promote environmental awareness by encouraging users to recycle and repurpose waste materials.
 
@@ -23,5 +16,11 @@ Eco Craft is built using the following technologies:
 - **Navigation Component**: Used for managing navigation between different screens using fragments.
 - **Retrofit**: A type-safe HTTP client for making API requests and fetching data (e.g., waste detection and craft ideas).
 - **Kotlin**: The primary programming language used for developing the app.
+
+## How to Clone This Project
+1. Clone this repository to your device.
+2. Open in Android Studio.
+3. Build the project.
+4. Run and debug the project on your AVD emulator.
 
 With a user-friendly interface and an educational approach, Eco Craft encourages sustainable living through creative reuse of materials.
